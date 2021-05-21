@@ -1,0 +1,97 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: black;
+ }
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: white
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 450px;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg);
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 85px;
+  font-weight: bold;
+}
+
+.spacer {
+background: #ea3535;
+height: 50px;
+
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-gap: 38px;
+  padding: 50px, 50px, 50px, 50px;
+}
+
+.card-category {
+ width: 220px;
+ height: 220px;
+ text-align: center;
+ padding-top: 96px;
+ font-size: 28px;
+ }
+
+.text_link{
+  text-decoration: none
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
