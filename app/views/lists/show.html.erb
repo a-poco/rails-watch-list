@@ -1,3 +1,25 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://pbs.twimg.com/profile_images/1025202073212805121/CsxqVO78_400x400.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", lists_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+       <%= link_to "Create list",  new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key , height: 300, crop: :fill %>')">
   <%= @list.name %>
 </div>
@@ -5,6 +27,7 @@
 <ul>
   <% @bookmarks.each do |bookmark| %>
   <li><%= bookmark.movie.title %></li>
+  <li><%= bookmark.comment %></li>
    <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: {confirm: "Are your sure?"}  %>
   <% end %>
 </ul>

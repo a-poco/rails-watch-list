@@ -23,7 +23,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  height: 450px;
+  height: 500px;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://northernvirginiamag.com/wp-content/uploads/2020/08/movie-popcorn.jpg);
 }
 
@@ -37,7 +37,7 @@
 
 .spacer {
 background: lightgrey;
-height: 50px;
+height: 40px;
 
 }
 
@@ -48,10 +48,10 @@ height: 50px;
   padding-top: 10px;
   justify-content: center;
   align-items: center;
-  color: white;
   font-size: 24px;
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 14px;
+
 }
 
 .card-category {
@@ -60,6 +60,8 @@ height: 50px;
  text-align: center;
  padding-top: 96px;
  font-size: 28px;
+ border-radius: 8px;
+
  }
 
 .text_link{
@@ -102,6 +104,13 @@ height: 50px;
 }
 
 a {
+  color: black;
+  text-shadow: gray;
+
+}
+
+a:hover {
   color: white;
+  text-decoration: none;
 }
 

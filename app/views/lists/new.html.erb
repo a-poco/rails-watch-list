@@ -1,14 +1,36 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://pbs.twimg.com/profile_images/1025202073212805121/CsxqVO78_400x400.png" %>
+  <% end %>
 
-<%= simple_form_for(@list) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", lists_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+       <%= link_to "Create list",  new_list_path, class: "nav-link" %>
+      </li>
+    </ul>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+<div class= "banner_form" >
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+    </div>
+     <button name="button" type="submit" class="btn btn-flat">
+        <%= f.button :submit %>
+      </button>
+  <% end %>
+</div>
