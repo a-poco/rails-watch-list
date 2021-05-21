@@ -36,7 +36,7 @@
 }
 
 .spacer {
-background: #ea3535;
+background: lightgrey;
 height: 50px;
 
 }
@@ -99,5 +99,9 @@ height: 50px;
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+a {
+  color: white;
 }
 
