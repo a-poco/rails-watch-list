@@ -1,6 +1,7 @@
 <h1>
   <strong><%= @list.name %></strong>
 </h1>
+  <%= link_to "Create bookmark",  new_list_bookmark_path(@list) %>
 
 <ul>
   <% @bookmarks.each do |bookmark| %>
