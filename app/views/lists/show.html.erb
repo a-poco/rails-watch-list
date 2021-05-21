@@ -1,7 +1,6 @@
-<h1>
-  <strong><%= @list.name %></strong>
-</h1>
-  <%= link_to "Create bookmark",  new_list_bookmark_path(@list) %>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, height: 300, crop: :fill %>')">
+  <%= @list.name %>
+</div>
 
 <ul>
   <% @bookmarks.each do |bookmark| %>
@@ -9,3 +8,7 @@
    <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: {confirm: "Are your sure?"}  %>
   <% end %>
 </ul>
+
+
+
+<%= link_to "Create bookmark",  new_list_bookmark_path(@list) %>
