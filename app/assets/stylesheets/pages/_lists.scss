@@ -42,10 +42,16 @@ height: 50px;
 }
 
 .cards {
-  display: grid;
+  display: flex;
   grid-template-columns: 100px 100px 100px 100px;
   grid-gap: 38px;
-  padding: 50px, 50px, 50px, 50px;
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
 .card-category {
